@@ -1,6 +1,4 @@
-# sv
-
-Showcase/practice project of a fictional doctors office.
+# Showcase/practice project of a fictional doctors office.
 
 ## Developing
 
