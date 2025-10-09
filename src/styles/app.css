@@ -158,4 +158,5 @@ h5,
 h6 {
 	line-height: 115%;
 	letter-spacing: -2%;
+	hyphens: auto;
 }

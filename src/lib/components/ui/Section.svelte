@@ -5,6 +5,6 @@
 	const { children, class: classes, ...rest }: SvelteHTMLElements['section'] = $props();
 </script>
 
-<section {...rest} class={cn('grid gap-8 px-5 py-10', classes)}>
+<section {...rest} class={cn('grid gap-8 py-10', classes)}>
 	{@render children?.()}
 </section>
