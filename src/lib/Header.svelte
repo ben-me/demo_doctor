@@ -8,7 +8,7 @@
 	import NavigationMenuTrigger from './components/ui/navigation-menu/navigation-menu-trigger.svelte';
 	import NavigationMenu from './components/ui/navigation-menu/navigation-menu.svelte';
 	import Logo from '$lib/assets/LogoPastel-border.webp';
-	import Link from '$lib/components/ui/link.svelte';
+	import Link from '$lib/components/ui/Link.svelte';
 	import { fade } from 'svelte/transition';
 	import type { Attachment } from 'svelte/attachments';
 
