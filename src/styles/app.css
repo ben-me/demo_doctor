@@ -36,6 +36,15 @@
 	/* Colors */
 	--green: oklch(0.8387 0.1074 141.16);
 	--blue: oklch(0.8228 0.0795 213.23);
+
+	/*Typography*/
+	--fs--2: clamp(0.5628rem, 0.5159rem + 0.2084vw, 0.7035rem);
+	--fs--1: clamp(0.7502rem, 0.6877rem + 0.2778vw, 0.9377rem);
+	--fs-0: clamp(1rem, 0.9167rem + 0.3704vw, 1.25rem);
+	--fs-1: clamp(1.333rem, 1.2219rem + 0.4937vw, 1.6663rem);
+	--fs-2: clamp(1.7769rem, 1.6288rem + 0.6581vw, 2.2211rem);
+	--fs-3: clamp(2.3686rem, 2.1712rem + 0.8773vw, 2.9607rem);
+	--fs-4: clamp(3.1573rem, 2.8942rem + 1.1694vw, 3.9467rem);
 }
 
 .dark {
@@ -117,4 +126,36 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+}
+
+h1 {
+	font-size: var(--fs-4);
+}
+
+h2 {
+	font-size: var(--fs-3);
+}
+
+h3 {
+	font-size: var(--fs-2);
+}
+
+h4 {
+	font-size: var(--fs-1);
+}
+
+p,
+li,
+h5 {
+	font-size: var(--fs-0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 115%;
+	letter-spacing: -2%;
 }
