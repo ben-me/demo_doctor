@@ -61,14 +61,13 @@
 		</h1>
 	</Link>
 	<div
-		class="fixed top-0 right-0 grid grid-rows-[0fr_1fr]
-		transition-[grid-template-rows] duration-150
-		data-[active=true]:grid-rows-[1fr_1fr] sm:hidden"
+		class="duration-230 fixed right-0 top-0 grid
+		grid-rows-[0fr_1fr] transition-[grid-template-rows] ease-in-out data-[active=true]:grid-rows-[1fr_1fr] sm:hidden"
 		data-active={mobile_nav_open}
 	>
 		<nav
 			aria-label="Mobiles Navigationsmenü"
-			class="mx-5 overflow-y-hidden rounded-bl-sm bg-primary text-right font-semibold"
+			class="bg-primary mx-5 overflow-y-hidden rounded-bl-sm text-right font-semibold"
 			inert={!mobile_nav_open}
 			id="mobile-nav"
 			{@attach mobile_nav_attachment}
@@ -84,7 +83,7 @@
 			</ul>
 		</nav>
 		<button
-			class="mx-5 h-min justify-self-end rounded-b-sm bg-primary px-1 py-[1rem_0.25rem] md:hidden"
+			class="bg-primary mx-5 h-min justify-self-end rounded-b-sm px-1 py-[1rem_0.25rem] md:hidden"
 			onclick={toggle_mobile_nav}
 			bind:this={mobile_nav_toggle_button}
 			aria-label="Mobiles
@@ -94,15 +93,15 @@
 			<svg xmlns="http://www.w3.org/2000/svg" class="w-10" viewBox="0 0 24 24">
 				{#if !mobile_nav_open}
 					<path
-						out:fade={{ duration: 120 }}
-						in:fade={{ delay: 150, duration: 150 }}
+						out:fade={{ duration: 180 }}
+						in:fade={{ delay: 180, duration: 180 }}
 						fill="#000"
 						d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1m0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1M3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1"
 					/>
 				{:else}
 					<path
-						in:fade={{ delay: 150, duration: 150 }}
-						out:fade={{ duration: 150 }}
+						in:fade={{ delay: 180, duration: 180 }}
+						out:fade={{ duration: 180 }}
 						fill="#ff1e1e"
 						d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4"
 					/>
