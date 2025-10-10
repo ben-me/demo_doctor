@@ -117,6 +117,12 @@
 
 	--color-primary: var(--green);
 	--color-secondary: var(--blue);
+
+	--text-normal: var(--fs-0);
+	--text-h1: var(--fs-4);
+	--text-h2: var(--fs-3);
+	--text-h3: var(--fs-2);
+	--text-h4: var(--fs-1);
 }
 
 @layer base {
@@ -126,37 +132,37 @@
 	body {
 		@apply bg-background text-foreground;
 	}
-}
 
-h1 {
-	font-size: var(--fs-4);
-}
+	h1 {
+		font-size: var(--fs-4);
+	}
 
-h2 {
-	font-size: var(--fs-3);
-}
+	h2 {
+		font-size: var(--fs-3);
+	}
 
-h3 {
-	font-size: var(--fs-2);
-}
+	h3 {
+		font-size: var(--fs-2);
+	}
 
-h4 {
-	font-size: var(--fs-1);
-}
+	h4 {
+		font-size: var(--fs-1);
+	}
 
-p,
-li,
-h5 {
-	font-size: var(--fs-0);
-}
+	p,
+	li,
+	h5 {
+		font-size: var(--fs-0);
+	}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	line-height: 115%;
-	letter-spacing: -2%;
-	hyphens: auto;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		line-height: 115%;
+		letter-spacing: -2%;
+		hyphens: auto;
+	}
 }
