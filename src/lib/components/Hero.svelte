@@ -8,7 +8,7 @@
 		<p>
 			Als Allgemeinmediziner sind wir Ihre Anlaufstelle für Beschwerden und Vorsorgeuntersuchungen.
 		</p>
-		<a class="bg-primary justify-self-center rounded-sm px-4 py-2 font-bold" href="tel:+12345678901"
+		<a class="bg-primary rounded-sm px-4 py-2 font-bold md:self-start" href="tel:+12345678901"
 			>Termin vereinbaren
 		</a>
 	</div>
