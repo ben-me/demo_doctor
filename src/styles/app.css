@@ -1,8 +1,6 @@
 @import 'tailwindcss';
-
 @import 'tw-animate-css';
 
-@custom-variant dark (&:is(.dark *));
 :root {
 	/* Shadcn variables */
 	--radius: 0.625rem;
@@ -34,8 +32,16 @@
 	--sidebar-ring: oklch(0.708 0 0);
 
 	/* Colors */
+	--background-dark: oklch(0.96 0 0);
+	--background-darker: oklch(0.92 0 0);
+	--foreground-dark: oklch(0.85 0 0);
+	--foreground-light: oklch(0.205 0 0);
+	--muted-green: oklch(0.7387 0.1074 141.16);
 	--green: oklch(0.8387 0.1074 141.16);
+	--light-green: oklch(0.9387 0.1074 141.16);
+	--muted-blue: oklch(0.7228 0.0795 213.23);
 	--blue: oklch(0.8228 0.0795 213.23);
+	--light-blue: oklch(0.9228 0.0795 213.23);
 
 	/*Typography*/
 	--fs--2: clamp(0.5628rem, 0.5159rem + 0.2084vw, 0.7035rem);
@@ -45,36 +51,6 @@
 	--fs-2: clamp(1.7769rem, 1.6288rem + 0.6581vw, 2.2211rem);
 	--fs-3: clamp(2.3686rem, 2.1712rem + 0.8773vw, 2.9607rem);
 	--fs-4: clamp(3.1573rem, 2.8942rem + 1.1694vw, 3.9467rem);
-}
-
-.dark {
-	/* Shadcn dark variables */
-	--background: oklch(0.145 0 0);
-	--foreground: oklch(0.985 0 0);
-	--card: oklch(0.205 0 0);
-	--card-foreground: oklch(0.985 0 0);
-	--popover: oklch(0.205 0 0);
-	--popover-foreground: oklch(0.985 0 0);
-	--primary: oklch(0.922 0 0);
-	--primary-foreground: oklch(0.205 0 0);
-	--secondary: oklch(0.269 0 0);
-	--secondary-foreground: oklch(0.985 0 0);
-	--muted: oklch(0.269 0 0);
-	--muted-foreground: oklch(0.708 0 0);
-	--accent: oklch(0.269 0 0);
-	--accent-foreground: oklch(0.985 0 0);
-	--destructive: oklch(0.704 0.191 22.216);
-	--border: oklch(1 0 0 / 10%);
-	--input: oklch(1 0 0 / 15%);
-	--ring: oklch(0.556 0 0);
-	--sidebar: oklch(0.205 0 0);
-	--sidebar-foreground: oklch(0.985 0 0);
-	--sidebar-primary: oklch(0.488 0.243 264.376);
-	--sidebar-primary-foreground: oklch(0.985 0 0);
-	--sidebar-accent: oklch(0.269 0 0);
-	--sidebar-accent-foreground: oklch(0.985 0 0);
-	--sidebar-border: oklch(1 0 0 / 10%);
-	--sidebar-ring: oklch(0.556 0 0);
 }
 
 @theme inline {
@@ -115,8 +91,17 @@
 	--color-sidebar-border: var(--sidebar-border);
 	--color-sidebar-ring: var(--sidebar-ring);
 
+	/* Custom variables */
+	--color-background-muted: var(--background-dark);
+	--color-background-light: var(--background-light);
+	--color-foreground-muted: var(foreground-dark);
+	--color-foreground-light: var(foreground-light);
+	--color-primary-muted: var(--muted-green);
 	--color-primary: var(--green);
+	--color-primary-light: var(--light-green);
+	--color-secondary-muted: var(--muted-blue);
 	--color-secondary: var(--blue);
+	--color-secondary-light: var(--light-blue);
 
 	--text-normal: var(--fs-0);
 	--text-h1: var(--fs-4);
@@ -130,7 +115,7 @@
 		@apply border-border outline-ring/50;
 	}
 	body {
-		@apply bg-background text-foreground;
+		@apply bg-background-light text-foreground;
 	}
 
 	h1 {
@@ -151,7 +136,10 @@
 
 	p,
 	li,
-	h5 {
+	h5,
+	td,
+	th,
+	address {
 		font-size: var(--fs-0);
 	}
 
@@ -163,6 +151,5 @@
 	h6 {
 		line-height: 115%;
 		letter-spacing: -2%;
-		hyphens: auto;
 	}
 }
