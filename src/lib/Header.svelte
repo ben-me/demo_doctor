@@ -55,11 +55,48 @@
 </script>
 
 <header class="flex justify-between">
-	<Link href="/" class="py-4" aria-label="Zur Demo-Care Homepage">
-		<h1>
-			<img src={Logo} alt="" class="max-w-[85px]" />
-		</h1>
-	</Link>
+	<div class="flex gap-12">
+		<Link href="/" class="py-4" aria-label="Zur Demo-Care Homepage">
+			<h1>
+				<img src={Logo} alt="" class="max-w-[85px]" />
+			</h1>
+		</Link>
+
+		<NavigationMenu viewport={false} class="hidden sm:flex">
+			<NavigationMenuList>
+				{#each LINKS as link (link.href)}
+					<NavigationMenuItem>
+						{#if !link.fragments}
+							<NavigationMenuLink href={resolve(link.href)}>{link.label}</NavigationMenuLink>
+						{:else}
+							<NavigationMenuTrigger onclick={() => goto(resolve(link.href))}>
+								{link.label}
+							</NavigationMenuTrigger>
+							<NavigationMenuContent>
+								<ul class="grid w-[150px] gap-4 p-2">
+									{#each link.fragments as fragment (fragment)}
+										<li>
+											<NavigationMenuLink href={`${resolve(link.href)}#${fragment.toLowerCase()}`}>
+												{fragment}
+											</NavigationMenuLink>
+										</li>
+									{/each}
+								</ul>
+							</NavigationMenuContent>
+						{/if}
+					</NavigationMenuItem>
+				{/each}
+			</NavigationMenuList>
+		</NavigationMenu>
+	</div>
+	<a
+		class="bg-primary-light border-primary-muted border-1 hidden self-center rounded-sm px-4 py-1 font-semibold sm:flex"
+		href="tel:012345678901"
+	>
+		Termin vereinbaren
+	</a>
+
+	<!-- Mobile Nav -->
 	<div
 		class="duration-230 fixed right-0 top-0 grid
 		grid-rows-[0fr_1fr] transition-[grid-template-rows] ease-in-out data-[active=true]:grid-rows-[1fr_1fr] sm:hidden"
@@ -113,31 +150,4 @@
 			</svg>
 		</button>
 	</div>
-
-	<NavigationMenu viewport={false} class="hidden sm:flex">
-		<NavigationMenuList>
-			{#each LINKS as link (link.href)}
-				<NavigationMenuItem>
-					{#if !link.fragments}
-						<NavigationMenuLink href={resolve(link.href)}>{link.label}</NavigationMenuLink>
-					{:else}
-						<NavigationMenuTrigger onclick={() => goto(resolve(link.href))}>
-							{link.label}
-						</NavigationMenuTrigger>
-						<NavigationMenuContent>
-							<ul class="grid w-[150px] gap-4 p-2">
-								{#each link.fragments as fragment (fragment)}
-									<li>
-										<NavigationMenuLink href={`${resolve(link.href)}#${fragment.toLowerCase()}`}>
-											{fragment}
-										</NavigationMenuLink>
-									</li>
-								{/each}
-							</ul>
-						</NavigationMenuContent>
-					{/if}
-				</NavigationMenuItem>
-			{/each}
-		</NavigationMenuList>
-	</NavigationMenu>
 </header>
