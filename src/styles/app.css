@@ -51,6 +51,11 @@
 	--fs-2: clamp(1.7769rem, 1.6288rem + 0.6581vw, 2.2211rem);
 	--fs-3: clamp(2.3686rem, 2.1712rem + 0.8773vw, 2.9607rem);
 	--fs-4: clamp(3.1573rem, 2.8942rem + 1.1694vw, 3.9467rem);
+
+	/* Shadows */
+	--shadow-s: 0 1px 2px #00000030, 0 2px 4px #00000015;
+	--shadow-m: 0 2px 4px #00000030, 0 4px 8px #00000015;
+	--shadow-l: 0 4px 6px #00000030, 0 6px 10px #00000015;
 }
 
 @theme inline {
@@ -108,6 +113,10 @@
 	--text-h2: var(--fs-3);
 	--text-h3: var(--fs-2);
 	--text-h4: var(--fs-1);
+
+	--shadow-s: var(--shadow-s);
+	--shadow-md: var(--shadow-m);
+	--shadow-lg: var(--shadow-l);
 }
 
 @layer base {
