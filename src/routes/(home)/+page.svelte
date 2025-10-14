@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Hero from '$lib/components/Hero.svelte';
 	import Information from '$lib/components/Information.svelte';
+	import Welcome from '$lib/components/Welcome.svelte';
 </script>
 
 <div
@@ -8,3 +9,4 @@
 ></div>
 <Hero />
 <Information />
+<Welcome />
