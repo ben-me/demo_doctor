@@ -7,9 +7,7 @@
 	<article
 		class="bg-primary shadow-sm/30 mx-auto max-w-[1200px] grow rounded-lg px-3 py-5 sm:px-10"
 	>
-		<h2 class="text-h3 my-[0_1rem] hyphens-auto font-bold sm:hyphens-none">
-			Praxis für Allgemeinmedizin
-		</h2>
+		<h2 class="my-[0_1rem] hyphens-auto font-bold sm:hyphens-none">Praxis für Allgemeinmedizin</h2>
 		<h3 class="my-[0_0.5rem] font-semibold">Informationen:</h3>
 		<div class="grid gap-10 sm:grid-cols-2">
 			<div class="grid gap-1">

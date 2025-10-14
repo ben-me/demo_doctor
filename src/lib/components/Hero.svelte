@@ -3,8 +3,11 @@
 </script>
 
 <Section class="gap-5 py-2 md:grid-cols-2 md:gap-10 md:p-10">
-	<div class="flex flex-col items-center justify-center gap-5 text-center md:text-left">
-		<h2 class="font-bold">Ihre <br class="sm:hidden" /> Gesundheit liegt uns am Herzen</h2>
+	<div
+		class="m-auto flex flex-col items-center justify-center gap-5 text-center md:items-start
+		md:text-left"
+	>
+		<h2 class="text-h1 font-bold">Ihre <br class="sm:hidden" /> Gesundheit liegt uns am Herzen</h2>
 		<p>
 			Als Allgemeinmediziner sind wir Ihre Anlaufstelle für Beschwerden und Vorsorgeuntersuchungen.
 		</p>

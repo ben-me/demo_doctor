@@ -45,13 +45,14 @@
 	--light-red: oklch(0.667 0.18 23.3);
 
 	/*Typography*/
-	--fs--2: clamp(0.5628rem, 0.5159rem + 0.2084vw, 0.7035rem);
-	--fs--1: clamp(0.7502rem, 0.6877rem + 0.2778vw, 0.9377rem);
-	--fs-0: clamp(1rem, 0.9167rem + 0.3704vw, 1.25rem);
-	--fs-1: clamp(1.333rem, 1.2219rem + 0.4937vw, 1.6663rem);
-	--fs-2: clamp(1.7769rem, 1.6288rem + 0.6581vw, 2.2211rem);
-	--fs-3: clamp(2.3686rem, 2.1712rem + 0.8773vw, 2.9607rem);
-	--fs-4: clamp(3.1573rem, 2.8942rem + 1.1694vw, 3.9467rem);
+	--fs--2: clamp(0.5628rem, 0.7248rem + -0.135vw, 0.6944rem);
+	--fs--1: clamp(0.7502rem, 0.8525rem + -0.0853vw, 0.8333rem);
+	--fs-0: clamp(1rem, 1rem + 0vw, 1rem);
+	--fs-1: clamp(1.2rem, 1.1693rem + 0.1364vw, 1.333rem);
+	--fs-2: clamp(1.44rem, 1.3623rem + 0.3455vw, 1.7769rem);
+	--fs-3: clamp(1.728rem, 1.5802rem + 0.657vw, 2.3686rem);
+	--fs-4: clamp(2.0736rem, 1.8235rem + 1.1115vw, 3.1573rem);
+	--fs-5: clamp(2.4883rem, 2.0913rem + 1.7645vw, 4.2087rem);
 
 	/* Shadows */
 	--shadow-s: 0 1px 2px #00000030, 0 2px 4px #00000015;
@@ -111,10 +112,11 @@
 	--color-tertiary: var(--light-red);
 
 	--text-normal: var(--fs-0);
-	--text-h1: var(--fs-4);
-	--text-h2: var(--fs-3);
-	--text-h3: var(--fs-2);
-	--text-h4: var(--fs-1);
+	--text-h1: var(--fs-5);
+	--text-h2: var(--fs-4);
+	--text-h3: var(--fs-3);
+	--text-h4: var(--fs-2);
+	--text-h5: var(--fs-1);
 
 	--shadow-s: var(--shadow-s);
 	--shadow-md: var(--shadow-m);
@@ -125,24 +127,23 @@
 	* {
 		@apply border-border outline-ring/50;
 	}
+
 	body {
 		@apply bg-background-light text-foreground;
-	}
-
-	h1 {
-		font-size: var(--fs-4);
+		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 	}
 
 	h2 {
-		font-size: var(--fs-3);
+		font-size: var(--fs-4);
+		max-inline-size: 50ch;
 	}
 
 	h3 {
-		font-size: var(--fs-2);
+		font-size: var(--fs-3);
 	}
 
 	h4 {
-		font-size: var(--fs-1);
+		font-size: var(--fs-2);
 	}
 
 	p,
@@ -151,6 +152,7 @@
 	td,
 	th,
 	address {
+		max-inline-size: 65ch;
 		font-size: var(--fs-0);
 	}
 
