@@ -25,7 +25,7 @@
 <article
 	{...rest}
 	class={cn(
-		'grid h-full grid-cols-[auto_1fr] grid-rows-[auto_1fr] items-center gap-x-3 gap-y-1 px-4 py-3',
+		'grid h-full grid-cols-[auto_1fr] grid-rows-[auto_1fr] items-center gap-x-3 gap-y-1 bg-white px-4 py-3',
 		className
 	)}
 >
