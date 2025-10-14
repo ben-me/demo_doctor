@@ -42,6 +42,7 @@
 	--muted-blue: oklch(0.7228 0.0795 213.23);
 	--blue: oklch(0.8228 0.0795 213.23);
 	--light-blue: oklch(0.9228 0.0795 213.23);
+	--light-red: oklch(0.667 0.18 23.3);
 
 	/*Typography*/
 	--fs--2: clamp(0.5628rem, 0.5159rem + 0.2084vw, 0.7035rem);
@@ -107,6 +108,7 @@
 	--color-secondary-muted: var(--muted-blue);
 	--color-secondary: var(--blue);
 	--color-secondary-light: var(--light-blue);
+	--color-tertiary: var(--light-red);
 
 	--text-normal: var(--fs-0);
 	--text-h1: var(--fs-4);
