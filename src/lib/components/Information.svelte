@@ -48,14 +48,14 @@
 			</div>
 			<div class="flex flex-col">
 				<h4 class="text-normal mb-0.5 font-bold">Addressdaten:</h4>
-				<address class="my-[0_1.5rem] flex flex-col gap-4 not-italic sm:my-[0_auto]">
+				<address class="my-[0_1.5rem] flex flex-col justify-around gap-6 not-italic">
 					<div>
 						Allgemeinmedizinische Praxis Demo-Care <br />
 						Musterstraße 23 <br />
 						12345 Musterstadt <br />
 					</div>
 
-					<div>
+					<div class="text-normal/3">
 						<a href="tel:012345678901" class="text-blue-800 underline">
 							<svg xmlns="http://www.w3.org/2000/svg" class="inline w-5" viewBox="0 0 24 24">
 								<path
@@ -77,7 +77,7 @@
 						</a>
 					</div>
 				</address>
-				<p>Parkplätze befinden sich hinter der Praxis.</p>
+				<p class="text-normal/5">Parkplätze befinden sich hinter der Praxis.</p>
 			</div>
 		</div>
 	</article>
