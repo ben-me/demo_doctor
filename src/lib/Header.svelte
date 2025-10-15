@@ -54,7 +54,7 @@
 	}
 </script>
 
-<header class="mx-auto flex w-full max-w-[1920px] justify-between">
+<header class="z-10 mx-auto flex w-full max-w-[1920px] justify-between">
 	<div class="flex gap-12">
 		<Link href="/" class="py-4" aria-label="Zur Demo-Care Homepage">
 			<h1>
@@ -67,16 +67,21 @@
 				{#each LINKS as link (link.href)}
 					<NavigationMenuItem>
 						{#if !link.fragments}
-							<NavigationMenuLink href={resolve(link.href)}>{link.label}</NavigationMenuLink>
+							<NavigationMenuLink class="text-normal" href={resolve(link.href)}
+								>{link.label}</NavigationMenuLink
+							>
 						{:else}
-							<NavigationMenuTrigger onclick={() => goto(resolve(link.href))}>
+							<NavigationMenuTrigger class="text-normal" onclick={() => goto(resolve(link.href))}>
 								{link.label}
 							</NavigationMenuTrigger>
 							<NavigationMenuContent>
-								<ul class="grid w-[150px] gap-4 p-2">
+								<ul class="grid gap-1 p-2">
 									{#each link.fragments as fragment (fragment)}
 										<li>
-											<NavigationMenuLink href={`${resolve(link.href)}#${fragment.toLowerCase()}`}>
+											<NavigationMenuLink
+												class="text-normal"
+												href={`${resolve(link.href)}#${fragment.toLowerCase()}`}
+											>
 												{fragment}
 											</NavigationMenuLink>
 										</li>
@@ -90,7 +95,7 @@
 		</NavigationMenu>
 	</div>
 	<a
-		class="bg-primary-light border-primary-muted border-1 hidden self-center rounded-sm px-4 py-1 font-semibold sm:flex"
+		class="shadow-(--shadow-s) hover:bg-primary-light hover:shadow-(--shadow-m) border-primary-muted border-1 hidden self-center rounded-sm px-4 py-1 font-semibold transition-all duration-150 sm:flex"
 		href="tel:012345678901"
 	>
 		Termin vereinbaren
@@ -99,7 +104,7 @@
 	<!-- Mobile Nav -->
 
 	<div
-		class="duration-230 fixed right-0 top-0 z-10 grid
+		class="duration-230 fixed right-0 top-0 grid
 		grid-rows-[0fr_1fr] transition-[grid-template-rows] ease-in-out data-[active=true]:grid-rows-[1fr_1fr] sm:hidden"
 		data-active={mobile_nav_open}
 	>
