@@ -54,7 +54,7 @@
 	}
 </script>
 
-<header class="flex justify-between">
+<header class="mx-auto flex w-full max-w-[1920px] justify-between">
 	<div class="flex gap-12">
 		<Link href="/" class="py-4" aria-label="Zur Demo-Care Homepage">
 			<h1>
@@ -97,15 +97,15 @@
 	</a>
 
 	<!-- Mobile Nav -->
+
 	<div
-		class="duration-230 fixed right-0 top-0 grid
+		class="duration-230 fixed right-0 top-0 z-10 grid
 		grid-rows-[0fr_1fr] transition-[grid-template-rows] ease-in-out data-[active=true]:grid-rows-[1fr_1fr] sm:hidden"
 		data-active={mobile_nav_open}
 	>
 		<nav
 			aria-label="Mobiles Navigationsmenü"
-			class="bg-primary inert:border-y-0 mx-5 overflow-y-hidden rounded-bl-sm border-x
-			border-y-[0_1px] border-black/20 px-[2rem_0] text-right font-semibold"
+			class="bg-primary shadow-(--shadow-s) mx-5 overflow-y-hidden rounded-bl-sm px-[2rem_0] text-right font-semibold"
 			inert={!mobile_nav_open}
 			id="mobile-nav"
 			{@attach mobile_nav_attachment}
@@ -121,10 +121,7 @@
 			</ul>
 		</nav>
 		<button
-			class={[
-				mobile_nav_open && 'border-[0_1px_1px_1px]',
-				'bg-primary border-t-primary  mx-5 h-min  justify-self-end rounded-b-sm border-black/20 px-1 py-[1rem_0.25rem] md:hidden'
-			]}
+			class="bg-primary duration-230 shadow-(--shadow-s) mx-5 h-min justify-self-end rounded-b-sm px-1 py-[1rem_0.25rem] transition-colors md:hidden"
 			onclick={toggle_mobile_nav}
 			bind:this={mobile_nav_toggle_button}
 			aria-label="Mobiles
