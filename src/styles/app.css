@@ -43,6 +43,8 @@
 	--blue: oklch(0.8228 0.0795 213.23);
 	--light-blue: oklch(0.9228 0.0795 213.23);
 	--light-red: oklch(0.667 0.18 23.3);
+	--dark-gray: oklch(0.25 0 0);
+	--gray: oklch(0.35 0 0);
 
 	/*Typography*/
 	--fs--2: clamp(0.5628rem, 0.7248rem + -0.135vw, 0.6944rem);
@@ -110,6 +112,8 @@
 	--color-secondary: var(--blue);
 	--color-secondary-light: var(--light-blue);
 	--color-tertiary: var(--light-red);
+	--color-footer-bg: var(--dark-gray);
+	--color-footer-bg-light: var(--gray);
 
 	--text-normal: var(--fs-0);
 	--text-h1: var(--fs-5);
