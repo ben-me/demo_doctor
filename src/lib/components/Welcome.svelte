@@ -24,7 +24,7 @@
 
 <Section class="gap-10">
 	<div class="m-auto">
-		<h2 class="my-[0_1rem] hyphens-auto text-center font-bold">Herzlich Willkommen!</h2>
+		<h2 class="my-[0_1rem] text-center font-bold">Herzlich Willkommen!</h2>
 		<p class="text-center">
 			... auf der Homepage unserer internistischen Praxis für Kardiologie und Gastroenterologie. Auf
 			unserer Homepage erhalten Sie einen Übersicht an Informationen zu unseren Leitsätzen und
