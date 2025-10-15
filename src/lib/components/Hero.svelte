@@ -2,7 +2,7 @@
 	import Section from '$lib/components/ui/Section.svelte';
 </script>
 
-<Section class="gap-5 py-2 md:grid-cols-2 md:gap-10 md:p-10">
+<Section class="gap-5 py-2 md:grid-cols-2 md:gap-10 md:py-10">
 	<div
 		class="m-auto flex flex-col items-center justify-center gap-5 text-center md:items-start
 		md:text-left"
