@@ -110,16 +110,19 @@
 	>
 		<nav
 			aria-label="Mobiles Navigationsmenü"
-			class="bg-primary shadow-(--shadow-s) mx-5 overflow-y-hidden rounded-bl-sm px-[2rem_0] text-right font-semibold"
+			class="bg-primary shadow-(--shadow-s) mx-5 overflow-y-hidden rounded-bl-sm text-right font-semibold"
 			inert={!mobile_nav_open}
 			id="mobile-nav"
 			{@attach mobile_nav_attachment}
 		>
-			<ul class="grid gap-2 px-5 py-4">
+			<ul class="divide-primary-muted grid divide-y-2 px-5">
 				{#each LINKS as link (link.label)}
 					<li>
-						<Link autofocus={link.href === '/'} href={link.href} onclick={toggle_mobile_nav}
-							>{link.label}</Link
+						<Link
+							autofocus={link.href === '/'}
+							class="inline-block w-full px-[2rem_0] py-2"
+							href={link.href}
+							onclick={toggle_mobile_nav}>{link.label}</Link
 						>
 					</li>
 				{/each}
