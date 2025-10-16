@@ -56,7 +56,7 @@
 
 <header class="z-10 mx-auto flex w-full max-w-[1920px] justify-between">
 	<div class="flex gap-12">
-		<Link href="/" class="py-4" aria-label="Zur Demo-Care Homepage">
+		<Link href="/" class="p-4" aria-label="Zur Demo-Care Homepage">
 			<h1>
 				<img src={Logo} alt="Logo der Demo-Care Praxis" class="max-w-[85px]" />
 			</h1>
