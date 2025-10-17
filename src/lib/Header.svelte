@@ -20,7 +20,7 @@
 		{
 			href: '/leistungen',
 			label: 'Leistungen',
-			fragments: ['Diagnostik', 'Infektiologie', 'Reisemedizin', 'Geriatrie']
+			fragments: ['Diagnostik', 'Infektiologie', 'Reisemedizin', 'Geriatrie', 'Impfungen']
 		},
 		{
 			href: '/team',
