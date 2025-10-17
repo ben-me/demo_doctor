@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Hero from './Hero.svelte';
 	import Information from './Information.svelte';
+	import ServiceOverview from './ServiceOverview.svelte';
 	import Team from './Team.svelte';
 	import Welcome from './Welcome.svelte';
 </script>
@@ -14,4 +15,5 @@
 <Hero />
 <Information />
 <Welcome />
+<ServiceOverview />
 <Team />
