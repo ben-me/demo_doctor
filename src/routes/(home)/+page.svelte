@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Hero from '$lib/components/Hero.svelte';
-	import Information from '$lib/components/Information.svelte';
-	import Team from '$lib/components/Team.svelte';
-	import Welcome from '$lib/components/Welcome.svelte';
+	import Hero from './Hero.svelte';
+	import Information from './Information.svelte';
+	import Team from './Team.svelte';
+	import Welcome from './Welcome.svelte';
 </script>
 
 <div

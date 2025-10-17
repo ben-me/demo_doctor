@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Section from './ui/Section.svelte';
-	import Link from './ui/Link.svelte';
+	import Section from '$lib/components/ui/Section.svelte';
+	import Link from '$lib/components/ui/Link.svelte';
 </script>
 
 <Section class="[&_picture]: md:grid-cols-2">

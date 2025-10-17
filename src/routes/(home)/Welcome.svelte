@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { IconName } from './ui/Icon.svelte';
-	import PrincipleCard from './ui/PrincipleCard.svelte';
-	import Section from './ui/Section.svelte';
+	import type { IconName } from '$lib/components/ui/Icon.svelte';
+	import PrincipleCard from '$lib/components/ui/PrincipleCard.svelte';
+	import Section from '$lib/components/ui/Section.svelte';
 
 	const PRINCIPLES: { title: string; icon: IconName; description: string }[] = [
 		{
