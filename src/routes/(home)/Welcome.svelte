@@ -34,13 +34,12 @@
 	</div>
 
 	<div>
-		<h3 class="text-h5 my-[0_1.125rem]">Prinzipien unserer Arbeit:</h3>
+		<h3 class="text-h5 my-[0_1rem] text-center font-semibold">Die Prinzipien unserer Arbeit:</h3>
 		<ul class="flex flex-col gap-4 md:flex-row">
 			{#each PRINCIPLES as principle (principle)}
 				<li class="max-w-full grow">
 					<PrincipleCard
 						iconName={principle.icon}
-						class="rounded-sm shadow-[var(--shadow-m)]"
 						title={principle.title}
 						description={principle.description}
 					/>
