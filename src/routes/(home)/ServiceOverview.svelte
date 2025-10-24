@@ -43,7 +43,7 @@
     {#each SERVICES as service (service)}
       <li class='max-w-full last-of-type:mx-auto md:flex-[0_1_49%]'>
         <article
-          class='border-b-1 md:border-border grid grid-cols-[auto_1fr] gap-3 border-gray-400/40 bg-white py-[0_1.5rem] md:rounded-sm md:border-0
+          class='border-b md:border-border grid grid-cols-[auto_1fr] gap-3 border-gray-400/40 bg-white py-[0_1.5rem] md:rounded-sm md:border-0
             md:p-5 md:shadow-md'
         >
           <Icon class='w-6 self-center' name={service.icon} />
