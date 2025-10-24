@@ -2,7 +2,7 @@
   import Section from '$lib/components/ui/Section.svelte'
 </script>
 
-<Section class='flex items-center  py-10 sm:flex'>
+<Section class='flex items-center py-10 sm:flex after:bg-gray-300 after:w-6/10 after:h-0.5 relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2'>
   <article
     class='bg-primary shadow-sm/30 mx-auto max-w-[1200px] grow rounded-lg px-3 py-5 sm:px-10'
   >

@@ -4,7 +4,7 @@
 :root {
   /* Shadcn variables */
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: oklch(0.96 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -32,7 +32,7 @@
   --sidebar-ring: oklch(0.708 0 0);
 
   /* Colors */
-  --background-dark: oklch(0.96 0 0);
+  --background-light: oklch(1 0 0);
   --background-darker: oklch(0.92 0 0);
   --foreground-dark: oklch(0.85 0 0);
   --foreground-light: oklch(0.205 0 0);
@@ -134,7 +134,7 @@
 
   body {
     height: 100dvh;
-    @apply bg-background-light text-foreground;
+    @apply bg-background text-foreground;
     font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
   }
 

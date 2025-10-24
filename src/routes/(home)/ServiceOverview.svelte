@@ -37,13 +37,13 @@
   ]
 </script>
 
-<Section>
+<Section class='after:bg-gray-300 after:w-6/10 after:h-0.5 relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2'>
   <h2 class='text-h3'>Unsere Leistungen</h2>
   <ul class='flex flex-col flex-wrap gap-3 md:flex-row'>
     {#each SERVICES as service (service)}
       <li class='max-w-full last-of-type:mx-auto md:flex-[0_1_49%]'>
         <article
-          class='border-b md:border-border grid grid-cols-[auto_1fr] gap-3 border-gray-400/40 bg-white py-[0_1.5rem] md:rounded-sm md:border-0
+          class='border-b md:border-border bg-background-light p-4 grid grid-cols-[auto_1fr] gap-3 border-gray-400/40 rounded-sm md:border-0
             md:p-5 md:shadow-md'
         >
           <Icon class='w-6 self-center' name={service.icon} />

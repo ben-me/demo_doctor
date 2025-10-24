@@ -22,17 +22,14 @@
   ]
 </script>
 
-<Section class='gap-10'>
-  <div class='m-auto'>
-    <h2 class='my-[0_1rem] text-center font-bold'>Herzlich Willkommen!</h2>
-    <p class='text-center'>
-      ... auf der Homepage unserer internistischen Praxis für Kardiologie und Gastroenterologie. Auf
-      unserer Homepage erhalten Sie einen Übersicht an Informationen zu unseren Leitsätzen und
-      Überzeugungen, lernen das Praxisteam kennen und können sich einen Einblick in unseren
-      medizinischen Leistungen verschaffen.
-    </p>
-  </div>
-
+<Section class='gap-2 p-4 md:p-12 rounded-sm after:bg-gray-300 after:w-6/10 after:h-0.5 relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2'>
+  <h2 class='text-center font-bold'>Herzlich Willkommen!</h2>
+  <p class='text-center mx-auto my-[0_2.5rem]'>
+    ... auf der Homepage unserer internistischen Praxis für Kardiologie und Gastroenterologie. Auf
+    unserer Homepage erhalten Sie einen Übersicht an Informationen zu unseren Leitsätzen und
+    Überzeugungen, lernen das Praxisteam kennen und können sich einen Einblick in unseren
+    medizinischen Leistungen verschaffen.
+  </p>
   <div>
     <h3 class='text-h5 my-[0_1rem] text-center font-semibold'>Die Prinzipien unserer Arbeit:</h3>
     <ul class='flex flex-col gap-4 md:flex-row'>
