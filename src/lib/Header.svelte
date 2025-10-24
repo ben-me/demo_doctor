@@ -1,158 +1,158 @@
-<script lang="ts">
-	import { goto } from '$app/navigation';
-	import { resolve } from '$app/paths';
-	import NavigationMenuContent from './components/ui/navigation-menu/navigation-menu-content.svelte';
-	import NavigationMenuItem from './components/ui/navigation-menu/navigation-menu-item.svelte';
-	import NavigationMenuLink from './components/ui/navigation-menu/navigation-menu-link.svelte';
-	import NavigationMenuList from './components/ui/navigation-menu/navigation-menu-list.svelte';
-	import NavigationMenuTrigger from './components/ui/navigation-menu/navigation-menu-trigger.svelte';
-	import NavigationMenu from './components/ui/navigation-menu/navigation-menu.svelte';
-	import Logo from '$assets/LogoPastel-border.webp';
-	import Link from '$lib/components/ui/Link.svelte';
-	import { fade } from 'svelte/transition';
-	import type { Attachment } from 'svelte/attachments';
+<script lang='ts'>
+  import type { Attachment } from 'svelte/attachments'
+  import { goto } from '$app/navigation'
+  import { resolve } from '$app/paths'
+  import Logo from '$assets/LogoPastel-border.webp'
+  import Link from '$lib/components/ui/Link.svelte'
+  import { fade } from 'svelte/transition'
+  import NavigationMenuContent from './components/ui/navigation-menu/navigation-menu-content.svelte'
+  import NavigationMenuItem from './components/ui/navigation-menu/navigation-menu-item.svelte'
+  import NavigationMenuLink from './components/ui/navigation-menu/navigation-menu-link.svelte'
+  import NavigationMenuList from './components/ui/navigation-menu/navigation-menu-list.svelte'
+  import NavigationMenuTrigger from './components/ui/navigation-menu/navigation-menu-trigger.svelte'
+  import NavigationMenu from './components/ui/navigation-menu/navigation-menu.svelte'
 
-	const LINKS: InternalLink[] = [
-		{
-			href: '/',
-			label: 'Home'
-		},
-		{
-			href: '/leistungen',
-			label: 'Leistungen',
-			fragments: ['Diagnostik', 'Infektiologie', 'Reisemedizin', 'Geriatrie', 'Impfungen']
-		},
-		{
-			href: '/team',
-			label: 'Team'
-		},
-		{
-			href: '/kontakt',
-			label: 'Kontakt'
-		}
-	];
+  const LINKS: InternalLink[] = [
+    {
+      href: '/',
+      label: 'Home',
+    },
+    {
+      href: '/leistungen',
+      label: 'Leistungen',
+      fragments: ['Diagnostik', 'Infektiologie', 'Reisemedizin', 'Geriatrie', 'Impfungen'],
+    },
+    {
+      href: '/team',
+      label: 'Team',
+    },
+    {
+      href: '/kontakt',
+      label: 'Kontakt',
+    },
+  ]
 
-	let mobile_nav_open = $state(false);
-	let mobile_nav_toggle_button: HTMLButtonElement;
+  let mobile_nav_open = $state(false)
+  let mobile_nav_toggle_button: HTMLButtonElement
 
-	const mobile_nav_attachment: Attachment<HTMLElement> = (element) => {
-		if (mobile_nav_open) {
-			const focus_elements = Array.from(element.querySelectorAll<HTMLAnchorElement>('[href],  a '));
-			focus_elements[0].focus();
-		}
+  const mobile_nav_attachment: Attachment<HTMLElement> = (element) => {
+    if (mobile_nav_open) {
+      const focus_elements = Array.from(element.querySelectorAll<HTMLAnchorElement>('[href],  a '))
+      focus_elements[0].focus()
+    }
 
-		return () => {
-			mobile_nav_toggle_button.focus();
-		};
-	};
+    return () => {
+      mobile_nav_toggle_button.focus()
+    }
+  }
 
-	function toggle_mobile_nav() {
-		if (window) {
-			document.body.classList.toggle('overflow-y-hidden');
-			mobile_nav_open = !mobile_nav_open;
-		}
-	}
+  function toggle_mobile_nav() {
+    if (window) {
+      document.body.classList.toggle('overflow-y-hidden')
+      mobile_nav_open = !mobile_nav_open
+    }
+  }
 </script>
 
-<header class="z-10 mx-auto flex w-full max-w-[1920px] justify-between px-4">
-	<div class="flex gap-12">
-		<Link href="/" class="py-4" aria-label="Zur Demo-Care Homepage">
-			<h1>
-				<img src={Logo} alt="Logo der Demo-Care Praxis" class="max-w-[85px]" />
-			</h1>
-		</Link>
+<header class='z-10 mx-auto flex w-full max-w-[1920px] justify-between px-4'>
+  <div class='flex gap-12'>
+    <Link href='/' class='py-4' aria-label='Zur Demo-Care Homepage'>
+      <h1>
+        <img src={Logo} alt='Logo der Demo-Care Praxis' class='max-w-[85px]' />
+      </h1>
+    </Link>
 
-		<NavigationMenu viewport={false} class="hidden sm:flex">
-			<NavigationMenuList>
-				{#each LINKS as link (link.href)}
-					<NavigationMenuItem>
-						{#if !link.fragments}
-							<NavigationMenuLink class="text-normal" href={resolve(link.href)}
-								>{link.label}</NavigationMenuLink
-							>
-						{:else}
-							<NavigationMenuTrigger class="text-normal" onclick={() => goto(resolve(link.href))}>
-								{link.label}
-							</NavigationMenuTrigger>
-							<NavigationMenuContent>
-								<ul class="grid gap-1 p-2">
-									{#each link.fragments as fragment (fragment)}
-										<li>
-											<NavigationMenuLink
-												class="text-normal"
-												href={`${resolve(link.href)}#${fragment.toLowerCase()}`}
-											>
-												{fragment}
-											</NavigationMenuLink>
-										</li>
-									{/each}
-								</ul>
-							</NavigationMenuContent>
-						{/if}
-					</NavigationMenuItem>
-				{/each}
-			</NavigationMenuList>
-		</NavigationMenu>
-	</div>
-	<a
-		class="shadow-(--shadow-s) hover:bg-primary-light hover:shadow-(--shadow-m) border-primary-muted border-1 hidden self-center rounded-sm px-4 py-1 font-semibold transition-all duration-150 sm:flex"
-		href="tel:012345678901"
-	>
-		Termin vereinbaren
-	</a>
+    <NavigationMenu viewport={false} class='hidden sm:flex'>
+      <NavigationMenuList>
+        {#each LINKS as link (link.href)}
+          <NavigationMenuItem>
+            {#if !link.fragments}
+              <NavigationMenuLink class='text-normal' href={resolve(link.href)}
+              >{link.label}</NavigationMenuLink
+              >
+            {:else}
+              <NavigationMenuTrigger class='text-normal' onclick={() => goto(resolve(link.href))}>
+                {link.label}
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul class='grid gap-1 p-2'>
+                  {#each link.fragments as fragment (fragment)}
+                    <li>
+                      <NavigationMenuLink
+                        class='text-normal'
+                        href={`${resolve(link.href)}#${fragment.toLowerCase()}`}
+                      >
+                        {fragment}
+                      </NavigationMenuLink>
+                    </li>
+                  {/each}
+                </ul>
+              </NavigationMenuContent>
+            {/if}
+          </NavigationMenuItem>
+        {/each}
+      </NavigationMenuList>
+    </NavigationMenu>
+  </div>
+  <a
+    class='shadow-(--shadow-s) hover:bg-primary-light hover:shadow-(--shadow-m) border-primary-muted border-1 hidden self-center rounded-sm px-4 py-1 font-semibold transition-all duration-150 sm:flex'
+    href='tel:012345678901'
+  >
+    Termin vereinbaren
+  </a>
 
-	<!-- Mobile Nav -->
+  <!-- Mobile Nav -->
 
-	<div
-		class="duration-230 fixed right-0 top-0 grid
-		grid-rows-[0fr_1fr] transition-[grid-template-rows] ease-in-out data-[active=true]:grid-rows-[1fr_1fr] sm:hidden"
-		data-active={mobile_nav_open}
-	>
-		<nav
-			aria-label="Mobiles Navigationsmenü"
-			class="bg-primary shadow-(--shadow-s) mx-5 overflow-y-hidden rounded-bl-sm text-right font-semibold"
-			inert={!mobile_nav_open}
-			id="mobile-nav"
-			{@attach mobile_nav_attachment}
-		>
-			<ul class="divide-primary-muted grid divide-y-2 px-5">
-				{#each LINKS as link (link.label)}
-					<li>
-						<Link
-							autofocus={link.href === '/'}
-							class="inline-block w-full px-[2rem_0] py-2"
-							href={link.href}
-							onclick={toggle_mobile_nav}>{link.label}</Link
-						>
-					</li>
-				{/each}
-			</ul>
-		</nav>
-		<button
-			class="bg-primary duration-230 shadow-(--shadow-s) mx-5 h-min justify-self-end rounded-b-sm px-1 py-[1rem_0.25rem] transition-colors md:hidden"
-			onclick={toggle_mobile_nav}
-			bind:this={mobile_nav_toggle_button}
-			aria-label="Mobiles
-			Navigationsmenu umschalten"
-			aria-controls="mobile-nav"
-		>
-			<svg xmlns="http://www.w3.org/2000/svg" class="w-10" viewBox="0 0 24 24">
-				{#if !mobile_nav_open}
-					<path
-						out:fade={{ duration: 230 }}
-						in:fade={{ duration: 230 }}
-						fill="#000"
-						d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1m0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1M3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1"
-					/>
-				{:else}
-					<path
-						in:fade={{ duration: 230 }}
-						out:fade={{ duration: 230 }}
-						fill="#ff1e1e"
-						d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4"
-					/>
-				{/if}
-			</svg>
-		</button>
-	</div>
+  <div
+    class='duration-230 fixed right-0 top-0 grid
+      grid-rows-[0fr_1fr] transition-[grid-template-rows] ease-in-out data-[active=true]:grid-rows-[1fr_1fr] sm:hidden'
+    data-active={mobile_nav_open}
+  >
+    <nav
+      aria-label='Mobiles Navigationsmenü'
+      class='bg-primary shadow-(--shadow-s) mx-5 overflow-y-hidden rounded-bl-sm text-right font-semibold'
+      inert={!mobile_nav_open}
+      id='mobile-nav'
+{@attach mobile_nav_attachment}
+    >
+      <ul class='divide-primary-muted grid divide-y-2 px-5'>
+        {#each LINKS as link (link.label)}
+          <li>
+            <Link
+              autofocus={link.href === '/'}
+              class='inline-block w-full px-[2rem_0] py-2'
+              href={link.href}
+              onclick={toggle_mobile_nav}>{link.label}</Link
+            >
+          </li>
+        {/each}
+      </ul>
+    </nav>
+    <button
+      class='bg-primary duration-230 shadow-(--shadow-s) mx-5 h-min justify-self-end rounded-b-sm px-1 py-[1rem_0.25rem] transition-colors md:hidden'
+      onclick={toggle_mobile_nav}
+      bind:this={mobile_nav_toggle_button}
+      aria-label='Mobiles
+        Navigationsmenu umschalten'
+      aria-controls='mobile-nav'
+    >
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-10' viewBox='0 0 24 24'>
+        {#if !mobile_nav_open}
+          <path
+            out:fade={{ duration: 230 }}
+            in:fade={{ duration: 230 }}
+            fill='#000'
+            d='M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1m0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1M3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1'
+          />
+        {:else}
+          <path
+            in:fade={{ duration: 230 }}
+            out:fade={{ duration: 230 }}
+            fill='#ff1e1e'
+            d='M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4'
+          />
+        {/if}
+      </svg>
+    </button>
+  </div>
 </header>

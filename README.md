@@ -2,7 +2,8 @@
 
 ## Developing
 
-Using bun to install the packages 
+Using bun to install the packages
+
 ```sh
 bun install
 ```

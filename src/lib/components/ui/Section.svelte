@@ -1,10 +1,10 @@
-<script lang="ts">
-	import { cn } from '$lib/utils';
-	import type { SvelteHTMLElements } from 'svelte/elements';
+<script lang='ts'>
+  import type { SvelteHTMLElements } from 'svelte/elements'
+  import { cn } from '$lib/utils'
 
-	const { children, class: classes, ...rest }: SvelteHTMLElements['section'] = $props();
+  const { children, class: classes, ...rest }: SvelteHTMLElements['section'] = $props()
 </script>
 
 <section {...rest} class={cn('mx-auto grid max-w-[1920px] gap-8 px-5 py-10', classes)}>
-	{@render children?.()}
+  {@render children?.()}
 </section>
