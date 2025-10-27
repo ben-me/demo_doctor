@@ -95,7 +95,7 @@
     </NavigationMenu>
   </div>
   <a
-    class='shadow-(--shadow-s) hover:bg-primary-light hover:shadow-(--shadow-m) border-primary-muted border-1 hidden self-center rounded-sm px-4 py-1 font-semibold transition-all duration-150 sm:flex'
+    class='shadow-s hover:bg-primary-light hover:shadow-m border-primary-muted border hidden self-center rounded-sm px-4 py-1 font-semibold transition-all duration-150 sm:flex'
     href='tel:012345678901'
   >
     Termin vereinbaren
@@ -110,8 +110,9 @@
   >
     <nav
       aria-label='Mobiles Navigationsmenü'
-      class='bg-primary shadow-(--shadow-s) mx-5 overflow-y-hidden rounded-bl-sm text-right font-semibold'
+      class='bg-primary shadow-s mx-5 overflow-y-hidden rounded-bl-sm text-right font-semibold'
       inert={!mobile_nav_open}
+      hidden={!mobile_nav_open}
       id='mobile-nav'
 {@attach mobile_nav_attachment}
     >
@@ -129,7 +130,7 @@
       </ul>
     </nav>
     <button
-      class='bg-primary duration-230 shadow-(--shadow-s) mx-5 h-min justify-self-end rounded-b-sm px-1 py-[1rem_0.25rem] transition-colors md:hidden'
+      class='bg-primary duration-230 shadow-s mx-5 h-min justify-self-end rounded-b-sm px-1 py-[1rem_0.25rem] transition-colors md:hidden'
       onclick={toggle_mobile_nav}
       bind:this={mobile_nav_toggle_button}
       aria-label='Mobiles
