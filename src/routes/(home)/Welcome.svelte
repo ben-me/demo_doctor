@@ -22,11 +22,11 @@
   ]
 </script>
 
-<Section class='gap-2 p-4 md:p-12 rounded-sm after:bg-gray-300 after:w-6/10 after:h-0.5 relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2'>
-  <h2 class='text-center font-bold'>Herzlich Willkommen!</h2>
+<Section class='gap-2 p-4 md:py-22 rounded-sm after:bg-gray-300 after:w-6/10 after:h-0.5 relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2'>
+  <h2 class='text-center mx-auto font-bold'>Herzlich Willkommen!</h2>
   <p class='text-center mx-auto my-[0_2.5rem]'>
     ... auf der Homepage unserer internistischen Praxis für Kardiologie und Gastroenterologie. Auf
-    unserer Homepage erhalten Sie einen Übersicht an Informationen zu unseren Leitsätzen und
+    unserer Homepage erhalten Sie einen Überblick über die wichtigsten Informationen, unsere Leitsätze und
     Überzeugungen, lernen das Praxisteam kennen und können sich einen Einblick in unseren
     medizinischen Leistungen verschaffen.
   </p>
