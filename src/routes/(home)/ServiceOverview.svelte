@@ -50,7 +50,7 @@
           <h3 class='text-h4 col-start-2'>
             {service.name}
           </h3>
-          <p class='col-start-2'>{service.description}</p>
+          <p class='col-start-2 text-black/70'>{service.description}</p>
           <a
             class='col-start-2 justify-self-end text-right text-sm font-semibold text-blue-700 underline focus:hover:text-blue-400'
             href={`/leistungen#${service.name.toLocaleLowerCase()}`}
