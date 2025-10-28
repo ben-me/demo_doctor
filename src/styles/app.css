@@ -121,10 +121,14 @@
   --text-h3: var(--fs-3);
   --text-h4: var(--fs-2);
   --text-h5: var(--fs-1);
+  --text-sm: var(--fs--1);
+  --text-xs: var(--fs--2);
 
   --shadow-s: var(--shadow-s);
   --shadow-md: var(--shadow-m);
   --shadow-lg: var(--shadow-l);
+
+  --breakpoint-xs: 30rem;
 }
 
 @layer base {
