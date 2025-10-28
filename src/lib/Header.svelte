@@ -54,7 +54,7 @@
   }
 </script>
 
-<header class='z-10 mx-auto flex w-full max-w-[1920px] justify-between px-4'>
+<header class='sticky top-0 rounded-b-lg bg-primary z-10 mx-auto flex w-full max-w-[1920px] justify-between px-4'>
   <div class='flex gap-12'>
     <Link href='/' class='py-4' aria-label='Zur Demo-Care Homepage'>
       <h1>
