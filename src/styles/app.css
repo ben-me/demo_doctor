@@ -137,7 +137,7 @@
   }
 
   body {
-    height: 100dvh;
+    min-height: 100dvh;
     @apply bg-background text-foreground;
     font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
   }
