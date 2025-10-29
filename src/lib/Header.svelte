@@ -54,7 +54,7 @@
   }
 </script>
 
-<header class='sticky top-0 rounded-b-lg bg-primary z-10 mx-auto flex w-full max-w-[1920px] justify-between px-4'>
+<header class='[view-transition-name:header] sticky top-0 rounded-b-lg bg-primary z-10 mx-auto flex w-full max-w-[1920px] justify-between px-4'>
   <div class='flex gap-12'>
     <Link href='/' class='py-4' aria-label='Zur Demo-Care Homepage'>
       <h1>
@@ -62,7 +62,7 @@
       </h1>
     </Link>
 
-    <NavigationMenu viewport={false} class='hidden sm:flex'>
+    <NavigationMenu viewport={false} delayDuration={0} class='hidden sm:flex'>
       <NavigationMenuList>
         {#each LINKS as link (link.href)}
           <NavigationMenuItem>
