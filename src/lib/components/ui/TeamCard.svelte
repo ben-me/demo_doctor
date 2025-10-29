@@ -32,8 +32,8 @@
   <div style='--shape-width: {background_shape.width}px; --shape-skew: {background_shape.skew}deg; --shape-height: {background_shape.height}px; --shape-x: {background_shape.x}%; --shape-y: {background_shape.y}%; --shape-radius: {background_shape.radius}%' class='absolute  bg-secondary/10 skew-(--shape-skew) -z-1 w-(--shape-width) h-(--shape-height) top-(--shape-y) left-(--shape-x) rounded-(--shape-radius)'></div>
   <img src={img} alt={`Portrait von ${name}`} class='xs:rounded-full max-w-[300px] xs:max-w-[150px] aspect-square sm:max-w-[200px] w-full' width='350' height='350' />
   <div class='py-2 px-3 grid grid-rows-[33%_66%] gap-2'>
-    <h4 class='text-sm font-semibold content-end'>{name}</h4>
-    <p class='opacity-70 text-xs overflow-y-scroll overflow-x-hidden hyphens-auto'>{description}</p>
+    <h4 class='text-normal font-semibold content-end'>{name}</h4>
+    <p class='opacity-70 text-sm hyphens-auto'>{description}</p>
 
   </div>
 </article>
