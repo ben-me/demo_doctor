@@ -5,6 +5,6 @@
   const { children, class: className, ...rest }: HTMLButtonAttributes = $props()
 </script>
 
-<button {...rest} class={cn(' rounded-sm px-4 py-2 ', className)}>
+<button {...rest} class={cn('rounded-sm px-4 py-2 ', className)}>
   {@render children?.()}
 </button>

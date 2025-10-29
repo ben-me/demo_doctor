@@ -161,7 +161,7 @@
   td,
   th,
   address {
-    max-inline-size: 65ch;
+    max-width: 65ch;
     font-size: var(--fs-0);
   }
 
