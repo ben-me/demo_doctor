@@ -20,7 +20,7 @@
     {
       href: '/leistungen',
       label: 'Leistungen',
-      fragments: ['Diagnostik', 'Infektiologie', 'Reisemedizin', 'Geriatrie', 'Impfungen'],
+      fragments: ['Diagnostik', 'Reisemedizin', 'Impfungen', 'Geriatrie', 'Infektiologie'],
     },
     {
       href: '/team',
@@ -54,7 +54,7 @@
   }
 </script>
 
-<header class='[view-transition-name:header] sticky top-0 rounded-b-lg bg-primary z-10 mx-auto flex w-full max-w-[1920px] justify-between px-4'>
+<header class='[view-transition-name:header] border-b-black/10 border-b sticky top-0  bg-primary z-10 mx-auto flex w-full max-w-[1920px] justify-between px-4'>
   <div class='flex gap-12'>
     <Link href='/' class='py-4' aria-label='Zur Demo-Care Homepage'>
       <h1>
