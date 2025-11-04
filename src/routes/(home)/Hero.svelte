@@ -12,8 +12,7 @@
       Als Allgemeinmediziner sind wir Ihre Anlaufstelle für Beschwerden und Vorsorgeuntersuchungen.
     </p>
     <a
-      class='bg-primary shadow-s hover:bg-primary-light hover:shadow-md rounded-sm px-4 py-1.5 font-bold transition-all
-        duration-150 md:self-start'
+      class='btn-primary'
       href='tel:+12345678901'
     >Termin vereinbaren
     </a>

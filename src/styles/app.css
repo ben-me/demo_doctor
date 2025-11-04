@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@plugin '@tailwindcss/forms';
 
 :root {
   /* Shadcn variables */
@@ -174,4 +175,12 @@
     line-height: 115%;
     letter-spacing: -2%;
   }
+}
+
+.input {
+  @apply mt-1 block w-full rounded-md border-gray-300 font-normal shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200;
+}
+
+.btn-primary {
+  @apply bg-primary shadow-s hover:bg-primary-light rounded-sm px-4 py-1.5 font-bold transition-all duration-150 hover:shadow-md md:self-start;
 }
