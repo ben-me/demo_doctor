@@ -112,9 +112,8 @@
       aria-label='Mobiles Navigationsmenü'
       class='bg-primary shadow-s mx-5 overflow-y-hidden rounded-bl-sm text-right font-semibold'
       inert={!mobile_nav_open}
-      hidden={!mobile_nav_open}
       id='mobile-nav'
-{@attach mobile_nav_attachment}
+    {@attach mobile_nav_attachment}
     >
       <ul class='divide-primary-muted grid divide-y-2 px-5'>
         {#each LINKS as link (link.label)}
