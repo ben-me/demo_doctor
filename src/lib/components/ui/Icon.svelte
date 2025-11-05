@@ -10,6 +10,7 @@
       | 'Microscope'
       | 'Phone'
       | 'Mail'
+      | 'Open'
 </script>
 
 <script lang='ts'>
@@ -132,16 +133,16 @@
 
 {#if name === 'Phone'}
   <svg xmlns='http://www.w3.org/2000/svg' class={twMerge('inline w-5', className)} {...rest} viewBox='0 0 24 24'>
-    <path
-      d='M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z'
-    />
-  </svg>
+    <path fill='none'  stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M13 2a9 9 0 0 1 9 9m-9-5a5 5 0 0 1 5 5m-4.168 5.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233a14 14 0 0 0 6.392 6.384' /></svg>
 {/if}
 
 {#if name === 'Mail'}
   <svg xmlns='http://www.w3.org/2000/svg' class={twMerge('inline w-5', className)} {...rest} viewBox='0 0 24 24'>
-    <path
-      d='M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7.175q.125 0 .263-.038t.262-.112L19.6 8.25q.2-.125.3-.312t.1-.413q0-.5-.425-.75T18.7 6.8L12 11L5.3 6.8q-.45-.275-.875-.012T4 7.525q0 .25.1.438t.3.287l7.075 4.425q.125.075.263.113t.262.037'
-    />
+    <path d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 14H4V8l8 5l8-5zm-8-7L4 6h16z' />
   </svg>
+{/if}
+
+{#if name === 'Open'}
+  <svg xmlns='http://www.w3.org/2000/svg' class={twMerge('inline w-5', className)} {...rest} viewBox='0 0 24 24'>
+    <path d='M18 7.05a1 1 0 0 0-1-1L9 6a1 1 0 0 0 0 2h5.56l-8.27 8.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0L16 9.42V15a1 1 0 0 0 1 1a1 1 0 0 0 1-1Z' /></svg>
 {/if}
