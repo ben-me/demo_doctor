@@ -140,7 +140,9 @@
   body {
     min-height: 100dvh;
     @apply bg-background text-foreground;
-    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    font-family:
+      Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+    font-size: var(--fs-0);
   }
 
   h2 {
