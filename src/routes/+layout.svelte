@@ -7,6 +7,7 @@
   const { children } = $props()
 
   import { onNavigate } from '$app/navigation'
+  import Toast from '$lib/components/toast/Toast.svelte';
 
   onNavigate((navigation) => {
     if (!document.startViewTransition)
@@ -33,6 +34,8 @@
   {@render children?.()}
 </main>
 <Footer />
+
+<Toast />
 
 <style>
 @keyframes fade-in {

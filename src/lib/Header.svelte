@@ -54,7 +54,8 @@
   }
 </script>
 
-<header class='[view-transition-name:header] border-b-black/10 border-b sticky top-0  bg-primary z-10 mx-auto flex w-full max-w-[1920px] justify-between px-4'>
+<header class='[view-transition-name:header] hidden border-b-black/10 border-b sticky top-0  bg-primary z-10
+  mx-auto md:flex w-full max-w-[1920px] justify-between px-4'>
   <div class='flex gap-12'>
     <Link href='/' class='py-4' aria-label='Zur Demo-Care Homepage'>
       <h1>
@@ -63,7 +64,7 @@
     </Link>
 
     <NavigationMenu viewport={false} delayDuration={0} class='hidden sm:flex'>
-      <NavigationMenuList>
+      <NavigationMenuList class='font-semibold'>
         {#each LINKS as link (link.href)}
           <NavigationMenuItem>
             {#if !link.fragments}
@@ -71,7 +72,7 @@
               >{link.label}</NavigationMenuLink
               >
             {:else}
-              <NavigationMenuTrigger class='text-normal' onclick={() => goto(resolve(link.href))}>
+              <NavigationMenuTrigger class='font-semibold' onclick={() => goto(resolve(link.href))}>
                 {link.label}
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -100,12 +101,19 @@
   >
     Termin vereinbaren
   </a>
+</header>
 
-  <!-- Mobile Nav -->
+<!-- Mobile Nav -->
 
+<header class='px-4 flex md:hidden'>
+  <Link href='/' class='py-4' aria-label='Zur Demo-Care Homepage'>
+    <h1>
+      <img src={Logo} alt='Logo der Demo-Care Praxis' class='max-w-[85px]' />
+    </h1>
+  </Link>
   <div
-    class='duration-230 fixed right-0 top-0 grid
-      grid-rows-[0fr_1fr] transition-[grid-template-rows] ease-in-out data-[active=true]:grid-rows-[1fr_1fr] sm:hidden'
+    class='duration-230 fixed right-0 top-0 grid z-10
+      grid-rows-[0fr_1fr] transition-[grid-template-rows] ease-in-out data-[active=true]:grid-rows-[1fr_1fr]'
     data-active={mobile_nav_open}
   >
     <nav
@@ -129,7 +137,8 @@
       </ul>
     </nav>
     <button
-      class='bg-primary duration-230 shadow-s mx-5 h-min justify-self-end rounded-b-sm px-1 py-[1rem_0.25rem] transition-colors md:hidden'
+      class='bg-primary duration-230 shadow-s mx-5 h-min justify-self-end rounded-b-sm px-1 py-[1rem_0.25rem]
+        transition-colors'
       onclick={toggle_mobile_nav}
       bind:this={mobile_nav_toggle_button}
       aria-label='Mobiles
